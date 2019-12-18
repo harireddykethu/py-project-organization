@@ -1,9 +1,19 @@
-import source  # importing from the same directory
+from source import *
 
-print(source.__name__)  # name of the imported module
+# This imports all names except those beginning with an
+# underscore (_). In most cases Python programmers
+# do not use this facility since it introduces an unknown
+# set of names into the interpreter, possibly hiding
+# some things you have already defined.
 
-print(source.PI)    # accessing variable declared in the module
+# all things defined in the source except for _
+# (considered private) are imported and used directly
+# without qualifying
 
-factorial_7 = source.factorial(7)
+print(PI)
 
-print(factorial_7)
+print(factorial(8))
+
+print(compare_case_agnostic('raman', 'RamaN'))
+
+# print(_counter)  # NameError: name '_counter' is not defined

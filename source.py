@@ -25,6 +25,12 @@ PI = 3.14159265359
 cities = ('Bengaluru', 'Mangaluru', 'Mumbai',
           'Chennai', 'Kolkata', 'Amritsar', 'Jaipur')
 
+_counter = 100
+
+
+def _greet_my_friend(name):
+    print(f'Hello {name}!')
+
 
 class Car:
     def __init__(self, name, year):
