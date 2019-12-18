@@ -1,9 +1,28 @@
-import source  # importing from the same directory
+import sys
 
-print(source.__name__)  # name of the imported module
 
-print(source.PI)    # accessing variable declared in the module
+# whenever a module is imported, it is searched in these locations
+for line in sys.path:
+    print(f'Path (original): {line}')
 
-factorial_7 = source.factorial(7)
+# as such, source module cannot be imported
+# since it is not in the present directory
 
-print(factorial_7)
+# import source # ModuleNotFoundError
+
+# in order to import it, we can use either:
+
+# from lib.general.source import PI
+
+# or
+sys.path.append('./lib/general')
+
+for line in sys.path:
+    print(f'Path (after append): {line}')
+
+
+try:
+    import source
+    print(source.PI)
+except ModuleNotFoundError as e:
+    print(f'Error: {e}')
