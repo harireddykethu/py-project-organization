@@ -12,10 +12,10 @@ for line in sys.path:
 
 # in order to import it, we can use either:
 
-# from lib.general.source import PI
+# from lib.general.source import PI     # looks elegant
 
 # or
-sys.path.append('./lib/general')
+sys.path.append('./lib/general')    # offers more flexibility
 
 for line in sys.path:
     print(f'Path (after append): {line}')
