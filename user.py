@@ -1,5 +1,5 @@
 from constants import PI
-from constants import cities as metro_cities
+from constants import cities as metro_cities    # aliasing
 from factorial import factorial
 
 print(f'π = {PI}')    # accessing variable declared in the module
