@@ -6,6 +6,11 @@ from source import *
 # set of names into the interpreter, possibly hiding
 # some things you have already defined.
 
+# Note that in general the practice of importing * from a module
+# or package is frowned upon, since it often causes
+# poorly readable code. However, it is okay to use it to save
+# typing in interactive sessions.
+
 # all things defined in the source except for _
 # (considered private) are imported and used directly
 # without qualifying
