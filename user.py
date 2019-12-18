@@ -1,28 +1,18 @@
-import sys
+# https://docs.python.org/3/library/functions.html#dir
 
+import lib.general.source as source_module
 
-# whenever a module is imported, it is searched in these locations
-for line in sys.path:
-    print(f'Path (original): {line}')
+print('Names in the source module:')
 
-# as such, source module cannot be imported
-# since it is not in the present directory
+for name in dir(source_module):
+    print(name)
 
-# import source # ModuleNotFoundError
+print('---------------------------------------')
 
-# in order to import it, we can use either:
+print('Names in the current (user) module:')
 
-# from lib.general.source import PI     # looks elegant
-
-# or
-sys.path.append('./lib/general')    # offers more flexibility
-
-for line in sys.path:
-    print(f'Path (after append): {line}')
-
-
-try:
-    import source
-    print(source.PI)
-except ModuleNotFoundError as e:
-    print(f'Error: {e}')
+for name in dir():
+    print(name)
+    # source_module is also a name in the current module
+    # also, 'name' variable introduced by this iterator block
+    # is also a name
