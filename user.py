@@ -1,9 +1,12 @@
-import source  # importing from the same directory
+from constants import PI
+from constants import cities as metro_cities
+from factorial import factorial
 
-print(source.__name__)  # name of the imported module
+print(f'π = {PI}')    # accessing variable declared in the module
 
-print(source.PI)    # accessing variable declared in the module
+factorial_7 = factorial(7)
 
-factorial_7 = source.factorial(7)
+print(f'7! = {factorial_7}')
 
-print(factorial_7)
+for metro in metro_cities:
+    print(f'Metro city: {metro}')
